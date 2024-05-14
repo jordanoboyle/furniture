@@ -8,6 +8,8 @@ class ChairsController < ApplicationController
     @chairs = Chair.all # if you want to send a variable to another file
     #you need @
     render template: "chairs/index"
+    # index tells you do go to view/chairs, and look in index.json.jbuilder
+    # This is important to know where it is sending searches
   end
 
   def first
