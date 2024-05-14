@@ -1,6 +1,9 @@
 class ChairsController < ApplicationController
   def information
-    render plain: " default"
+    # render plain: " default"
+    # you can shovel all this into an array in order to render...but
+    chairs = Chair.all
+    render json: {message: "hello"}
   end
 
   def first
