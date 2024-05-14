@@ -12,7 +12,8 @@ class ChairsController < ApplicationController
       weight: chair.weight,
       color: chair.color,
       cost: chair.cost,
-      delivery: chair.delivery
+      delivery: chair.delivery,
+      updated_at: chair.updated_at,
     }
   end
 end
