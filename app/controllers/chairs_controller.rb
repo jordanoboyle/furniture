@@ -1,9 +1,13 @@
 class ChairsController < ApplicationController
+  
   def information
     # render plain: " default"
     # you can shovel all this into an array in order to render...but
-    chairs = Chair.all
-    render json: {message: "hello"}
+    # when you use a jbuilder...you need .json at end of url
+
+    @chairs = Chair.all # if you want to send a variable to another file
+    #you need @
+    render template: "chairs/index"
   end
 
   def first
